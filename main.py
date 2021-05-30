@@ -26,7 +26,7 @@ async def on_message(message):
     elif message.content.startswith('/길찾기'):
         strResult = getRoute(message.content.split()[1])
         await message.channel.send(strResult)
-    elif message.content.startswith('/장소찾기'):
+    elif message.content.startswith('/주변시설'):
         await message.channel.send(message.content)
 
 client.run(TOKEN)

@@ -38,6 +38,8 @@ async def on_message(message):
     elif message.content.startswith('/길찾기'):
         strResult = getRoute(message.content.split()[1])
         await message.channel.send(strResult)
+    elif message.content.startswith('/도움말'):
+        await message.channel.send("도움말 메뉴")
     elif message.content.startswith('/주변시설'):
         strResult = getRecommendation(message.content.split()[1])
         await message.channel.send(strResult)

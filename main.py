@@ -6,6 +6,12 @@ tokenFile.close()
 
 client = discord.Client()
 
+def getRoute(inputData):
+    locationFrom = inputData.split("~")[0]
+    locationTo = inputData.split("~")[1]
+
+    return "Route from %s to %s"%(locationFrom, locationTo)
+
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
@@ -24,9 +30,3 @@ async def on_message(message):
         await message.channel.send(message.content)
 
 client.run(TOKEN)
-
-def getRoute(inputData):
-    locationFrom = inputData.split("~")[0]
-    locationTo = inputData.split("~")[1]
-
-    return "Route from %s to %s"%(locationFrom, locationTo)

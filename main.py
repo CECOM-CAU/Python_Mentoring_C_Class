@@ -20,6 +20,7 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
     elif message.content.startswith('/길찾기'):
+        strResult = getRoute(message.content.split())
         await message.channel.send(message.content)
     elif message.content.startswith('/장소찾기'):
         await message.channel.send(message.content)

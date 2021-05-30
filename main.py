@@ -25,3 +25,9 @@ async def on_message(message):
         await message.channel.send(message.content)
 
 client.run(TOKEN)
+
+def getRoute(inputData):
+    locationFrom = inputData.split("~")[0]
+    locationTo = inputData.split("~")[1]
+
+    return "Route from %s to %s"%(locationFrom, locationTo)

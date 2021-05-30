@@ -4,8 +4,6 @@ tokenFile = open("TOKEN_FILE", 'r')
 TOKEN = tokenFile.read().rstrip('\n')
 tokenFile.close()
 
-import discord
-
 client = discord.Client()
 
 @client.event

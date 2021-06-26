@@ -165,6 +165,33 @@ mapping(alcohol3)
 
 # In[38]:
 
+def getResult(where, what):
+    strResult = ""
+
+    if where == "정문":
+        if what == "음식점":
+            strResult = mapping(food1)
+        elif what == "카페":
+            strResult = mapping(cafe1)
+        elif what == "주점":
+            strResult = mapping(alcohol1)
+    elif where == "중문":
+        if what == "음식점":
+            strResult = mapping(food2)
+        elif what == "카페":
+            strResult = mapping(cafe2)
+        elif what == "주점":
+            strResult = mapping(alcohol2)
+    elif where == "후문":
+        if what == "음식점":
+            strResult = mapping(food3)
+        elif what == "카페":
+            strResult = mapping(cafe3)
+        elif what == "주점":
+            strResult = mapping(alcohol3)
+    
+    return f'정문주변주점을 찾은 결과입니다 {mapping(alcohol1)}'
+
 
 async def 정문주변음식점(ctx):
     await ctx.send(f'정문주변음식점을 찾은 결과입니다 {mapping(food1)}')

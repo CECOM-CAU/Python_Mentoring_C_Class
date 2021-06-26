@@ -10,14 +10,7 @@ tokenFile.close()
 client = discord.Client()
 
 def getRecommendation(inputData):
-    strResult = "올바르지 않은 입력입니다. 음식점, 주점, 카페 검색만 지원합니다."
-
-    if inputData == "음식점":
-        strResult = "음식점 추천 결과입니다."
-    elif inputData == "주점":
-        strResult = "주점 추천 결과입니다."
-    elif inputData == "카페":
-        strResult = "카페 추천 결과입니다."
+    strResult = Recommendation.getResult("정문", "주점")
     
     return strResult
 

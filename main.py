@@ -52,7 +52,7 @@ def getRoute(inputData):
 
     locaionResult = locationFrom + " " + locationTo
 
-    return "Route from %s to %s : %s"%(locationFrom, locationTo. urldict[locaionResult])
+    return "Route from %s to %s : %s"%(locationFrom, locationTo. str(urldict[locaionResult]))
 
 @client.event
 async def on_ready():

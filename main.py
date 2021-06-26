@@ -52,7 +52,7 @@ def getRoute(inputData):
 
     locaionResult = locationFrom + " " + locationTo
 
-    return "%s에서 %s로 이동하는 최단경로 결과입니다. %s"%(locationFrom, locationTo, urldict[locaionResult])
+    return "%s에서 %s으로 이동하는 최단경로 결과입니다. %s"%(locationFrom, locationTo, urldict[locaionResult])
 
 @client.event
 async def on_ready():

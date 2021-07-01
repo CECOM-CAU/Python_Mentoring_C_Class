@@ -10,9 +10,9 @@ tokenFile.close()
 client = discord.Client()
 
 def getRecommendation(inputData):
-    strResult = Recommendation.getResult("정문", "주점")
-    
-    return strResult
+    dataRecommend = Recommendation.getResult("정문", "주점")
+
+    return dataRecommend
 
 def getRoute(inputData):
     urldict = {'정문101관': 'https://han.gl/CfGKk', '정문 102관': 'https://han.gl/JEpsD', '정문 103관': 'https://han.gl/j6VJg',
@@ -67,7 +67,10 @@ async def on_message(message):
         strResult = "사용법\n /길찾기 [출발지]~[도착지]\n /주변시설 [음식점, 주점, 카페]"
         await message.channel.send(strResult)
     elif message.content.startswith('/주변시설'):
-        strResult = getRecommendation(message.content.split()[1])
-        await message.channel.send(strResult)
+        sendData = getRecommendation(message.content.split()[1])
+        sendFile = discord.File(sendData[0])
+        sendMessage = sendData[1]
+        await message.channel.send(file=sendFile)
+        await message.channel.send(sendMessage[0:1500])
 
 client.run(TOKEN)

@@ -304,31 +304,40 @@ alcohol3
 # In[102]:
 
 def getResult(where, what):
-    strResult = ""
+    dataReturn = []
 
     if where == "정문":
         if what == "음식점":
-            strResult = mapping(food1)
+            dataReturn.append("figure_food1.png")
+            dataReturn.append(food1)
         elif what == "카페":
-            strResult = mapping(cafe1)
+            dataReturn.append("figure_cafe1.png")
+            dataReturn.append(cafe1)
         elif what == "주점":
-            strResult = mapping(alcohol1)
+            dataReturn.append("figure_alcohol1.png")
+            dataReturn.append(alcohol1)
     elif where == "중문":
         if what == "음식점":
-            strResult = mapping(food2)
+            dataReturn.append("figure_food2.png")
+            dataReturn.append(food2)
         elif what == "카페":
-            strResult = mapping(cafe2)
+            dataReturn.append("figure_cafe2.png")
+            dataReturn.append(cafe2)
         elif what == "주점":
-            strResult = mapping(alcohol2)
+            dataReturn.append("figure_alcohol2.png")
+            dataReturn.append(alcohol2)
     elif where == "후문":
         if what == "음식점":
-            strResult = mapping(food3)
+            dataReturn.append("figure_food3.png")
+            dataReturn.append(food3)
         elif what == "카페":
-            strResult = mapping(cafe3)
+            dataReturn.append("figure_cafe3.png")
+            dataReturn.append(cafe3)
         elif what == "주점":
-            strResult = mapping(alcohol3)
+            dataReturn.append("figure_alcohol3.png")
+            dataReturn.append(alcohol3)
     
-    return f'정문주변주점을 찾은 결과입니다 {mapping(alcohol1)}'
+    return dataReturn
 
 async def 정문주변음식점(ctx):
     await ctx.send(f'정문주변음식점을 찾은 결과입니다 {food1},{showimage1}')

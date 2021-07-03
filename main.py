@@ -74,7 +74,8 @@ async def on_message(message):
         sendMessage = ""
         await message.channel.send(file=sendFile)
         for messageData in sendData[1]:
-            sendMessage = sendMessage + str(messageData[0]) + "\n"
+            sendMessage += "%s\n - (%s, %s)\n"%(str(messageData[0]), str(messageData[7]), str(messageData[6]))
+        
         await message.channel.send(sendMessage)
 
 client.run(TOKEN)

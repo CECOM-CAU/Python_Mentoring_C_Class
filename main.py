@@ -9,8 +9,8 @@ tokenFile.close()
 
 client = discord.Client()
 
-def getRecommendation(inputData):
-    dataRecommend = Recommendation.getResult("정문", "주점")
+def getRecommendation(where, type):
+    dataRecommend = Recommendation.getResult(where, type)
 
     return dataRecommend
 
@@ -67,7 +67,9 @@ async def on_message(message):
         strResult = "사용법\n /길찾기 [출발지]~[도착지]\n /주변시설 [음식점, 주점, 카페]"
         await message.channel.send(strResult)
     elif message.content.startswith('/주변시설'):
-        sendData = getRecommendation(message.content.split()[1])
+        inputWhere = message.content.split()[1]
+        inputType = message.content.split()[2]
+        sendData = getRecommendation(inputWhere, inputType)
         sendFile = discord.File(sendData[0])
         sendMessage = sendData[1]
         await message.channel.send(file=sendFile)

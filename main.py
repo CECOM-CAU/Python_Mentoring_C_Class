@@ -71,6 +71,6 @@ async def on_message(message):
         sendFile = discord.File(sendData[0])
         sendMessage = sendData[1]
         await message.channel.send(file=sendFile)
-        await message.channel.send(sendMessage)
+        await message.channel.send(sendMessage[0])
 
 client.run(TOKEN)

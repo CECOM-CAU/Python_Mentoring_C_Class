@@ -309,34 +309,34 @@ def getResult(where, what):
     if where == "정문":
         if what == "음식점":
             dataReturn.append("figure_food1.png")
-            dataReturn.append(food1)
+            dataReturn.append(food1.values.tolist())
         elif what == "카페":
             dataReturn.append("figure_cafe1.png")
-            dataReturn.append(cafe1)
+            dataReturn.append(cafe1.values.tolist())
         elif what == "주점":
             dataReturn.append("figure_alcohol1.png")
-            dataReturn.append(alcohol1)
+            dataReturn.append(alcohol1.values.tolist())
     elif where == "중문":
         if what == "음식점":
             dataReturn.append("figure_food2.png")
-            dataReturn.append(food2)
+            dataReturn.append(food2.values.tolist())
         elif what == "카페":
             dataReturn.append("figure_cafe2.png")
-            dataReturn.append(cafe2)
+            dataReturn.append(cafe2.values.tolist())
         elif what == "주점":
             dataReturn.append("figure_alcohol2.png")
-            dataReturn.append(alcohol2)
+            dataReturn.append(alcohol2.values.tolist())
     elif where == "후문":
         if what == "음식점":
             dataReturn.append("figure_food3.png")
-            dataReturn.append(food3)
+            dataReturn.append(food3.values.tolist())
         elif what == "카페":
             dataReturn.append("figure_cafe3.png")
-            dataReturn.append(cafe3)
+            dataReturn.append(cafe3.values.tolist())
         elif what == "주점":
             dataReturn.append("figure_alcohol3.png")
-            dataReturn.append(alcohol3)
-    
+            dataReturn.append(alcohol3.values.tolist())
+
     return dataReturn
 
 async def 정문주변음식점(ctx):

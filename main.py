@@ -71,9 +71,10 @@ async def on_message(message):
         inputType = message.content.split()[2]
         sendData = getRecommendation(inputWhere, inputType)
         sendFile = discord.File(sendData[0])
-        sendMessage = sendData[1]
+        sendMessage = ""
         await message.channel.send(file=sendFile)
-        for messageData in sendMessage:
-            await message.channel.send(messageData)
+        for messageData in sendData[1]:
+            sendMessage = sendMessage + str(messageData[0]) + "\n"
+        await message.channel.send(sendMessage)
 
 client.run(TOKEN)

@@ -169,7 +169,7 @@ mapping(alcohol3)
 
 from PIL import Image
  
-image = Image.open("figure_food1.png")
+image = Image.open("/home/server/Python_Mentoring_C_Class/figure_food1.png")
 showimage1 = image.show()
 showimage1
 
@@ -177,7 +177,7 @@ showimage1
 # In[98]:
 
 
-image = Image.open("figure_food2.png")
+image = Image.open("/home/server/Python_Mentoring_C_Class/figure_food2.png")
 showimage2 = image.show()
 showimage2
 
@@ -185,7 +185,7 @@ showimage2
 # In[85]:
 
 
-image = Image.open("figure_food3.png")
+image = Image.open("/home/server/Python_Mentoring_C_Class/figure_food3.png")
 showimage3 = image.show()
 showimage3
 
@@ -193,7 +193,7 @@ showimage3
 # In[86]:
 
 
-image = Image.open("figure_cafe1.png")
+image = Image.open("/home/server/Python_Mentoring_C_Class/figure_cafe1.png")
 showimage4 = image.show()
 showimage4
 
@@ -201,7 +201,7 @@ showimage4
 # In[87]:
 
 
-image = Image.open("figure_cafe2.png")
+image = Image.open("/home/server/Python_Mentoring_C_Class/figure_cafe2.png")
 showimage5 = image.show()
 showimage5
 
@@ -209,7 +209,7 @@ showimage5
 # In[97]:
 
 
-image = Image.open("figure_cafe3.png")
+image = Image.open("/home/server/Python_Mentoring_C_Class/figure_cafe3.png")
 showimage6 = image.show()
 showimage6
 
@@ -217,7 +217,7 @@ showimage6
 # In[89]:
 
 
-image = Image.open("figure_alcohol1.png")
+image = Image.open("/home/server/Python_Mentoring_C_Class/figure_alcohol1.png")
 showimage7 = image.show()
 showimage7
 
@@ -225,7 +225,7 @@ showimage7
 # In[90]:
 
 
-image = Image.open("figure_alcohol2.png")
+image = Image.open("/home/server/Python_Mentoring_C_Class/figure_alcohol2.png")
 showimage8 = image.show()
 showimage8
 
@@ -233,7 +233,7 @@ showimage8
 # In[96]:
 
 
-image = Image.open("figure_alcohol3.png")
+image = Image.open("/home/server/Python_Mentoring_C_Class/figure_alcohol3.png")
 showimage9 = image.show()
 showimage9
 
@@ -308,33 +308,33 @@ def getResult(where, what):
 
     if where == "정문":
         if what == "음식점":
-            dataReturn.append("figure_food1.png")
+            dataReturn.append("/home/server/Python_Mentoring_C_Class/figure_food1.png")
             dataReturn.append(food1.values.tolist())
         elif what == "카페":
-            dataReturn.append("figure_cafe1.png")
+            dataReturn.append("/home/server/Python_Mentoring_C_Class/figure_cafe1.png")
             dataReturn.append(cafe1.values.tolist())
         elif what == "주점":
-            dataReturn.append("figure_alcohol1.png")
+            dataReturn.append("/home/server/Python_Mentoring_C_Class/figure_alcohol1.png")
             dataReturn.append(alcohol1.values.tolist())
     elif where == "중문":
         if what == "음식점":
-            dataReturn.append("figure_food2.png")
+            dataReturn.append("/home/server/Python_Mentoring_C_Class/figure_food2.png")
             dataReturn.append(food2.values.tolist())
         elif what == "카페":
-            dataReturn.append("figure_cafe2.png")
+            dataReturn.append("/home/server/Python_Mentoring_C_Class/figure_cafe2.png")
             dataReturn.append(cafe2.values.tolist())
         elif what == "주점":
-            dataReturn.append("figure_alcohol2.png")
+            dataReturn.append("/home/server/Python_Mentoring_C_Class/figure_alcohol2.png")
             dataReturn.append(alcohol2.values.tolist())
     elif where == "후문":
         if what == "음식점":
-            dataReturn.append("figure_food3.png")
+            dataReturn.append("/home/server/Python_Mentoring_C_Class/figure_food3.png")
             dataReturn.append(food3.values.tolist())
         elif what == "카페":
-            dataReturn.append("figure_cafe3.png")
+            dataReturn.append("/home/server/Python_Mentoring_C_Class/figure_cafe3.png")
             dataReturn.append(cafe3.values.tolist())
         elif what == "주점":
-            dataReturn.append("figure_alcohol3.png")
+            dataReturn.append("/home/server/Python_Mentoring_C_Class/figure_alcohol3.png")
             dataReturn.append(alcohol3.values.tolist())
 
     return dataReturn

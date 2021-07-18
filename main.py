@@ -3,7 +3,7 @@ import webbrowser as web
 
 import Recommendation
 
-tokenFile = open("TOKEN_FILE", 'r')
+tokenFile = open("/home/server/Python_Mentoring_C_Class/TOKEN_FILE", 'r')
 TOKEN = tokenFile.read().rstrip('\n')
 tokenFile.close()
 

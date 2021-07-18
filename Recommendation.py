@@ -10,7 +10,7 @@ import pandas as pd
 # In[6]:
 
 
-df = pd.read_excel("data.xlsx")
+df = pd.read_excel("/home/server/Python_Mentoring_C_Class/data.xlsx")
 df
 
 
